@@ -26,3 +26,9 @@ body {
     text-align: center;
     border: 2px solid #d4af37;
 }
+.game-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
