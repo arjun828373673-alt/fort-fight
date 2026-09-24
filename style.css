@@ -2,6 +2,8 @@ body {
     background-color: #090115;
     background-size: cover;
     background-position: center;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 #start-button {
     background:transparent;
