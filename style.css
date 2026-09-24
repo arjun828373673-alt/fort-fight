@@ -3,7 +3,7 @@ body {
     background-size: cover;
     background-position: center;
 }
-start-button {
+#start-button {
     background-color: #090115;
     color: #fff;
     border: none;
