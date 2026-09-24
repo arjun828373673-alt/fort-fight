@@ -4,7 +4,7 @@ body {
     background-position: center;
 }
 #start-button {
-    background: fixed linear-gradient(to right, #f20505, #0341f9);
+    background:transparent;
     color: #fff;
     border: none;
     padding: 20px 30px;
