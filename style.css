@@ -4,7 +4,7 @@ body {
     background-position: center;
 }
 #start-button {
-    background-color: #d4af37;
+    background: fixed linear-gradient(to right, #f20505, #0341f9);
     color: #fff;
     border: none;
     padding: 20px 30px;
@@ -15,4 +15,7 @@ body {
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
+}
+#start-button:hover {
+    background-color: #bfa12f;
 }
