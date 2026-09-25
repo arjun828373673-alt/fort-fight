@@ -42,13 +42,10 @@ body {
     height: 100%;
 }
 .gameCanvas {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
     background: #2cc5d6;
-     border: 3px solid #030165;
-     border-radius: 8px;
-     cursor: crosshair;
-     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    border: 3px solid #030165;
+    border-radius: 8px;
+    cursor: crosshair;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         
 }
