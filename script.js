@@ -24,6 +24,7 @@ const ctx = gameCanvas.getContext("2d");
   color: "green"
  };
  function drawGrass() {
+  ctx.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
   ctx.fillStyle = grass.color;
   ctx.fillRect(grass.x, grass.y, grass.width, grass.height);
  }
@@ -50,6 +51,7 @@ document.addEventListener("keyup", (event) => {
  }  function gameLoop() {
   update();
   draw();
+  drawGrass();
   requestAnimationFrame(gameLoop);
  }
 
