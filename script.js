@@ -20,7 +20,7 @@ const ctx = gameCanvas.getContext("2d");
   x: 800,
   y: 299,
   width: 800,
-  height: 600,
+  height: 299,
   color: "green"
  };
  ctx.fillStyle = grass.color;
