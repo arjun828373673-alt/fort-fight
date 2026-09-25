@@ -17,14 +17,13 @@ const ctx = gameCanvas.getContext("2d");
  ctx.fillRect(player.x, player.y, player.width, player.height);
 
  const grass = {
-  x: 800,
+  x: 0,
   y: 299,
   width: 800,
   height: 299,
   color: "green"
  };
  function drawGrass() {
-  ctx.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
   ctx.fillStyle = grass.color;
   ctx.fillRect(grass.x, grass.y, grass.width, grass.height);
  }
@@ -45,9 +44,12 @@ document.addEventListener("keyup", (event) => {
   if (keys["ArrowRight"] || keys["d"]) player.x += player.speed;
  }
  function draw() {
+
   ctx.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
+  drawGrass();
   ctx.fillStyle = player.color;
   ctx.fillRect(player.x, player.y, player.width, player.height);
+
  }  function gameLoop() {
   update();
   draw();
