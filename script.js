@@ -23,9 +23,11 @@ const ctx = gameCanvas.getContext("2d");
   height: 299,
   color: "green"
  };
- ctx.fillStyle = grass.color;
- ctx.fillRect(grass.x, grass.y, grass.width, grass.height);
-
+ function drawGrass() {
+  ctx.fillStyle = grass.color;
+  ctx.fillRect(grass.x, grass.y, grass.width, grass.height);
+ }
+ 
  const keys = {};
  
  document.addEventListener("keydown", (event) => {
