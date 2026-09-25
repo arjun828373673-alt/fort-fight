@@ -3,3 +3,6 @@ Document.getElementById("gameCanvas").addEventListener("click", function() {
     var canvas = document.getElementById("gameCanvas");
     var ctx = canvas.getContext("2d");
 });
+document.getElementById("start-button").addEventListener("click",() => showView("gameCanvas")); {
+    
+}
