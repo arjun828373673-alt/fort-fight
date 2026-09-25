@@ -1,6 +1,6 @@
 document.getElementById("start-button").addEventListener("click",() => showView("gameCanvas")); 
 
-const gameCanvas = document.getElementById("gameCanvas");
+const gameCanvas = document.getElementById("game-Canvas");
 const ctx = gameCanvas.getContext("2d");
  gameCanvas.width = window.innerWidth;
  gameCanvas.height = window.innerHeight;
@@ -14,3 +14,10 @@ const ctx = gameCanvas.getContext("2d");
  };
  ctx.fillStyle = player.color;
  ctx.fillRect(player.x, player.y, player.width, player.height);
+ 
+ function showView(id) {
+  document.querySelectorAll(".game-section, #gameCanvas").forEach(el => {
+    el.style.display = "none";
+  });
+  document.getElementById(id).style.display = "block";
+}
