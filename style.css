@@ -41,7 +41,7 @@ body {
     width: 100%;
     height: 100%;
 }
-.gameCanvas {
+#gameCanvas {
     background: #2cc5d6;
     border: 3px solid #030165;
     border-radius: 8px;
