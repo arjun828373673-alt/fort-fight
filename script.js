@@ -6,8 +6,8 @@ const ctx = gameCanvas.getContext("2d");
  gameCanvas.height = 600;
 
  const player = {
-  x: 50,
-  y: 300,
+  x: 300,
+  y: 400,
   width: 50,
   height: 50,
   color: "red"
