@@ -16,6 +16,16 @@ const ctx = gameCanvas.getContext("2d");
  ctx.fillStyle = player.color;
  ctx.fillRect(player.x, player.y, player.width, player.height);
 
+ const grass = {
+  x: 800,
+  y: 299,
+  width: 800,
+  height: 600,
+  color: "green"
+ };
+ ctx.fillStyle = grass.color;
+ ctx.fillRect(grass.x, grass.y, grass.width, grass.height);
+
  const keys = {};
  
  document.addEventListener("keydown", (event) => {
