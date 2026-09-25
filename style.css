@@ -44,7 +44,7 @@ body {
     justify-content: center;
 }
 #gameCanvas {
-    display: block;
+    display: none;
     overflow: hidden;
     background: #2cc5d6;
     border: 3px solid #030165;
