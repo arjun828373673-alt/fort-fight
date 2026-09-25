@@ -20,7 +20,7 @@ const ctx = gameCanvas.getContext("2d");
   x: 0,
   y: 299,
   width: 800,
-  height: 299,
+  height: 301,
   color: "green"
  };
  function drawGrass() {
@@ -53,7 +53,6 @@ document.addEventListener("keyup", (event) => {
  }  function gameLoop() {
   update();
   draw();
-  drawGrass();
   requestAnimationFrame(gameLoop);
  }
 
