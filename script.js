@@ -2,8 +2,8 @@ document.getElementById("start-button").addEventListener("click",() => showView(
 
 const gameCanvas = document.getElementById("game-Canvas");
 const ctx = gameCanvas.getContext("2d");
- gameCanvas.width = window.innerWidth;
- gameCanvas.height = window.innerHeight;
+ gameCanvas.width = 500;
+ gameCanvas.height = 500;
 
  const player = {
   x: 50,
