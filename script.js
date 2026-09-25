@@ -1,6 +1,6 @@
 document.getElementById("start-button").addEventListener("click",() => showView("gameCanvas")); 
 
-const gameCanvas = document.getElementById("game-Canvas");
+const gameCanvas = document.getElementById("gameCanvas");
 const ctx = gameCanvas.getContext("2d");
  gameCanvas.width = 500;
  gameCanvas.height = 500;
