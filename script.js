@@ -10,7 +10,7 @@ const ctx = gameCanvas.getContext("2d");
   y: 400,
   width: 15,
   height: 50,
-  color: "red,black",
+  color: "black",
   speed: 5
  };
  ctx.fillStyle = player.color;
