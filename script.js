@@ -42,6 +42,9 @@ document.addEventListener("keyup", (event) => {
   if (keys["ArrowDown"] || keys["s"]) player.y += player.speed;
   if (keys["ArrowLeft"] || keys["a"]) player.x -= player.speed;
   if (keys["ArrowRight"] || keys["d"]) player.x += player.speed;
+
+  player.x = Math.max(0, Math.min(player.x, gameCanvas.width - player.width));
+  player.y = Math.max(grass.y, Math.min(player.y, gameCanvas.height - player.height));
  }
  function draw() {
 
