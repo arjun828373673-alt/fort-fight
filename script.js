@@ -10,7 +10,7 @@ const ctx = gameCanvas.getContext("2d");
   y: 400,
   width: 15,
   height: 50,
-  color: "black",
+  color: "yellow",
   speed: 5
  };
  ctx.fillStyle = player.color;
@@ -43,6 +43,20 @@ const ctx = gameCanvas.getContext("2d");
   ctx.fillRect(castle.x + 10, castle.y + 10, 20, 20);
   ctx.fillRect(castle.x + 70, castle.y + 10, 20, 20);
  }
+ const enemy = [{
+  x: 500,
+  y: 300,
+  width: 20,
+  height: 20,
+  color: "red"
+ },
+ {
+  x: 200,
+  y: 350,
+  width: 20,
+  height: 20,
+  color: "blue"
+ }];
  
  const keys = {};
  
