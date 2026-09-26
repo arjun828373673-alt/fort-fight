@@ -8,7 +8,7 @@ const ctx = gameCanvas.getContext("2d");
  const player = {
   x: 300,
   y: 400,
-  width: 5,
+  width: 15,
   height: 50,
   color: "red",
   speed: 5
