@@ -57,7 +57,12 @@ const ctx = gameCanvas.getContext("2d");
   height: 20,
   color: "blue"
  }];
- 
+ function drawEnemies() {
+  enemy.forEach(e => {
+   ctx.fillStyle = e.color;
+   ctx.fillRect(e.x, e.y, e.width, e.height);
+  });
+ }
  const keys = {};
  
  document.addEventListener("keydown", (event) => {
@@ -84,7 +89,7 @@ document.addEventListener("keyup", (event) => {
   drawCastle();
   ctx.fillStyle = player.color;
   ctx.fillRect(player.x, player.y, player.width, player.height);
-
+  drawEnemies();
  }  function gameLoop() {
   update();
   draw();
