@@ -10,7 +10,7 @@ const ctx = gameCanvas.getContext("2d");
   y: 400,
   width: 15,
   height: 50,
-  color: "red",
+  color: "red,black",
   speed: 5
  };
  ctx.fillStyle = player.color;
@@ -36,7 +36,7 @@ const ctx = gameCanvas.getContext("2d");
  };
  function drawCastle() {
   ctx.fillStyle = "red";
-  ctx.fillRect(castle.x + 30, castle.y - 20, 60, 90);
+  ctx.fillRect(castle.x + 30, castle.y - 20, 100, 90);
   ctx.fillStyle = castle.color;
   ctx.fillRect(castle.x, castle.y, castle.width, castle.height);
   ctx.fillStyle = "black";
