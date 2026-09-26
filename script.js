@@ -35,8 +35,6 @@ const ctx = gameCanvas.getContext("2d");
   color: "gray"
  };
  function drawCastle() {
-  ctx.fillStyle = "red";
-  ctx.fillRect(castle.x + 90, castle.y - 10, 40, 100);
   ctx.fillStyle = castle.color;
   ctx.fillRect(castle.x, castle.y, castle.width, castle.height);
   ctx.fillStyle = "black";
