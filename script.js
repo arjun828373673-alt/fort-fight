@@ -27,6 +27,22 @@ const ctx = gameCanvas.getContext("2d");
   ctx.fillStyle = grass.color;
   ctx.fillRect(grass.x, grass.y, grass.width, grass.height);
  }
+ const castle = {
+  x: 600,
+  y: 200,
+  width: 100,
+  height: 100,
+  color: "gray"
+ };
+ function drawCastle() {
+  ctx.fillStyle = castle.color;
+  ctx.fillRect(castle.x, castle.y, castle.width, castle.height);
+  ctx.fillStyle = "black";
+  ctx.fillRect(castle.x + 40, castle.y + 60, 20, 40);
+  ctx.fillStyle = "darkgray";
+  ctx.fillRect(castle.x + 10, castle.y + 10, 20, 20);
+  ctx.fillRect(castle.x + 70, castle.y + 10, 20, 20);
+ }
  
  const keys = {};
  
@@ -46,10 +62,12 @@ document.addEventListener("keyup", (event) => {
   player.x = Math.max(0, Math.min(player.x, gameCanvas.width - player.width));
   player.y = Math.max(grass.y, Math.min(player.y, gameCanvas.height - player.height));
  }
+
  function draw() {
 
   ctx.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
   drawGrass();
+  drawCastle();
   ctx.fillStyle = player.color;
   ctx.fillRect(player.x, player.y, player.width, player.height);
 
