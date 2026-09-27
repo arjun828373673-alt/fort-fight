@@ -43,27 +43,33 @@ const ctx = gameCanvas.getContext("2d");
   ctx.fillRect(castle.x + 10, castle.y + 10, 20, 20);
   ctx.fillRect(castle.x + 70, castle.y + 10, 20, 20);
  }
- const enemy = {
-  x: 200,
-  y: 500,
-  width: 20,
-  height: 50,
-  color: "red"
- }
- const enemy2 = {
-  x:100,
-  y: 500,
-  width: 20,
-  height: 50,
-  color: "blue"
- }
+ let enemies = [
+{ x: 200, y: 500, width: 20, height: 50,  color: "red"},
+ { x: 400, y: 500,width: 20,height: 50,color: "red"}];
+
  function drawEnemies() {
-  ctx.fillStyle = enemy.color;
-  ctx.fillRect(enemy.x, enemy.y, enemy.width, enemy.height);
-  ctx.fillStyle = enemy2.color;
-  ctx.fillRect(enemy2.x, enemy2.y, enemy2.width, enemy2.height);
+  enemies.forEach(enemy => {
+   ctx.fillStyle = enemy.color;
+   ctx.fillRect(enemy.x, enemy.y, enemy.width, enemy.height);
+  });
  };
- 
+ function swapEnemies() {
+  enemies.forEach(enemy => {
+   const color = ["red", "blue", "green", "purple", "orange"];
+   enemies.push({
+    x: Math.random() * (gameCanvas.width - 20),
+    y: 500,
+    width: 20,
+    height: 50,
+    color: color[Math.floor(Math.random() * color.length)]  
+   });
+  });
+ }
+ setInterval(() => {
+  for (let i = 0; i< 10; i++) 
+   swapEnemies();
+  }, 1000);
+  
  const keys = {};
  
  document.addEventListener("keydown", (event) => {
