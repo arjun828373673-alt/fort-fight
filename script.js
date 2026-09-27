@@ -44,8 +44,9 @@ const ctx = gameCanvas.getContext("2d");
   ctx.fillRect(castle.x + 70, castle.y + 10, 20, 20);
  }
  let enemies = [
-{ x: 200, y: 500, width: 20, height: 50,  color: "red"},
- { x: 400, y: 500,width: 20,height: 50,color: "red"}];
+{ x: 200, y: 500, width: 20, height: 50,  color: "red", speed: 2 },
+ { x: 400, y: 500,width: 20,height: 50,color: "red", speed: 2}
+];
 
  function drawEnemies() {
   enemies.forEach(enemy => {
@@ -61,7 +62,8 @@ const ctx = gameCanvas.getContext("2d");
     y: 500,
     width: 20,
     height: 50,
-    color: color[Math.floor(Math.random() * color.length)]  
+    color: color[Math.floor(Math.random() * color.length)],
+    speed: 2
    });
   });
  }
@@ -69,7 +71,11 @@ const ctx = gameCanvas.getContext("2d");
   for (let i = 0; i< 10; i++) 
    swapEnemies();
   }, 1000);
-
+  function moveEnemies() {
+  enemies.forEach(enemy => {
+   enemy.y -= enemy.speed;
+  });
+ }
   function isColliding(a, b) {
   return (
         a.x < b.x + b.width &&
@@ -98,6 +104,7 @@ document.addEventListener("keyup", (event) => {
 
   player.x = Math.max(0, Math.min(player.x, gameCanvas.width - player.width));
   player.y = Math.max(grass.y, Math.min(player.y, gameCanvas.height - player.height));
+  moveEnemies();
   checkCollisions();
  }
 
