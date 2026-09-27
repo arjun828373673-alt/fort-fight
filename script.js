@@ -46,15 +46,15 @@ const ctx = gameCanvas.getContext("2d");
  const enemy = [{
   x: 100,
   y: 500,
-  width: 50,
-  height: 10,
+  width: 20,
+  height: 50,
   color: "red"
  },
  {
   x:100,
   y: 500,
-  width: 50,
-  height: 10,
+  width: 20,
+  height: 50,
   color: "blue"
  }
 
