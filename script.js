@@ -59,18 +59,6 @@ const ctx = gameCanvas.getContext("2d");
    ctx.fillRect(e.x, e.y, e.width, e.height);
   });
  }
- 
-   canvas.addEventListener("mousemove", function(event) {
-    const rect = canvas.getBoundingClientRect();
-     const mouseX = event.clientX - rect.left;
-     const mouseY = event.clientY - rect.top;
-       mouseTrail.push({ x: mouseX, y: mouseY, time: Date.now() });
-
-     if (!gameOver) {
-      checkSlice(mouseX, mouseY);
-     }
-     });
-
  const keys = {};
  
  document.addEventListener("keydown", (event) => {
