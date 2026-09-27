@@ -44,7 +44,7 @@ const ctx = gameCanvas.getContext("2d");
   ctx.fillRect(castle.x + 70, castle.y + 10, 20, 20);
  }
  const enemy = {
-  x: 100,
+  x: 200,
   y: 500,
   width: 20,
   height: 50,
