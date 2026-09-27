@@ -43,28 +43,27 @@ const ctx = gameCanvas.getContext("2d");
   ctx.fillRect(castle.x + 10, castle.y + 10, 20, 20);
   ctx.fillRect(castle.x + 70, castle.y + 10, 20, 20);
  }
- const enemy = [{
+ const enemy = {
   x: 100,
   y: 500,
   width: 20,
   height: 50,
   color: "red"
- },
- {
+ }
+ const enemy2 = {
   x:100,
   y: 500,
   width: 20,
   height: 50,
   color: "blue"
  }
-
- ];
  function drawEnemies() {
-  enemy.forEach(e => {
-   ctx.fillStyle = e.color;
-   ctx.fillRect(e.x, e.y, e.width, e.height);
-  });
- }
+  ctx.fillStyle = enemy.color;
+  ctx.fillRect(enemy.x, enemy.y, enemy.width, enemy.height);
+  ctx.fillStyle = enemy2.color;
+  ctx.fillRect(enemy2.x, enemy2.y, enemy2.width, enemy2.height);
+ };
+ 
  const keys = {};
  
  document.addEventListener("keydown", (event) => {
