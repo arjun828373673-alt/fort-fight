@@ -44,11 +44,15 @@ const ctx = gameCanvas.getContext("2d");
   ctx.fillRect(castle.x + 70, castle.y + 10, 20, 20);
  }
  const enemy = [{
+  x: 100,
+  y: 100,
   width: 100,
   height: 100,
   color: "red"
  },
  {
+  x:100,
+  y: 100,
   width: 100,
   height: 100,
   color: "blue"
