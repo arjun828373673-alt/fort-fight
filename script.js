@@ -52,7 +52,9 @@ const ctx = gameCanvas.getContext("2d");
   width: 100,
   height: 100,
   color: "blue"
- }];
+ }
+
+ ];
  function drawEnemies() {
   enemy.forEach(e => {
    ctx.fillStyle = e.color;
