@@ -28,7 +28,7 @@ const ctx = gameCanvas.getContext("2d");
   ctx.fillRect(grass.x, grass.y, grass.width, grass.height);
  }
  const castle = {
-  x: 600,
+  x: 300,
   y: 200,
   width: 100,
   height: 100,
