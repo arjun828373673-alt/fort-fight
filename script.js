@@ -69,7 +69,18 @@ const ctx = gameCanvas.getContext("2d");
   for (let i = 0; i< 10; i++) 
    swapEnemies();
   }, 1000);
-  
+
+  function isColliding(a, b) {
+  return (
+        a.x < b.x + b.width &&
+         a.x + a.width > b.x &&
+         a.y < b.y + b.height &&
+         a.y + a.height > b.y
+       );
+  }
+  function checkCollisions() {
+   enemies = enemies.filter(enemy => !isColliding(player, enemy));
+   }
  const keys = {};
  
  document.addEventListener("keydown", (event) => {
@@ -87,6 +98,7 @@ document.addEventListener("keyup", (event) => {
 
   player.x = Math.max(0, Math.min(player.x, gameCanvas.width - player.width));
   player.y = Math.max(grass.y, Math.min(player.y, gameCanvas.height - player.height));
+  checkCollisions();
  }
 
  function draw() {
