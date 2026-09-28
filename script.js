@@ -100,8 +100,8 @@ function isColliding(a, b) {
    }
  const keys = {};
  function restartGame() {
-  enemies = [ { x: 200, y: 500, width: 20, height: 50, color: "red", speed: 0.7 },
-  { x: 400, y: 500, width: 20, height: 50, color: "red", speed: 0.7 } ];
+  enemies = [ { x: 200, y: 500, width: 20, height: 50, color: "red", speed: 0.5 },
+  { x: 400, y: 500, width: 20, height: 50, color: "red", speed: 0.5 } ];
   player.x = 300;
   player.y = 400;
   gameOver = false;
