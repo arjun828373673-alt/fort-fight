@@ -53,10 +53,13 @@ const ctx = gameCanvas.getContext("2d");
    ctx.fillStyle = enemy.color;
    ctx.fillRect(enemy.x, enemy.y, enemy.width, enemy.height);
   });
+
+  const MAX_ENEMIES = 40;
  };
- function swapEnemies() {
+ function spawnEnemy() {
+  if (enemies.length < MAX_ENEMIES) return;
   enemies.forEach(enemy => {
-   const color = ["red", "blue", "green", "purple", "orange"];
+   const color = ["red", "blue", "purple", "orange"];
    enemies.push({
     x: Math.random() * (gameCanvas.width - 20),
     y: 500,
@@ -68,7 +71,7 @@ const ctx = gameCanvas.getContext("2d");
   });
  }
  setInterval(() => {
-  for (let i = 0; i< 10; i++) 
+  for (let i = 0; i< 3; i++) 
    swapEnemies();
   }, 1000);
   function moveEnemies() {
