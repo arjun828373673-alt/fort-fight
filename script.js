@@ -47,8 +47,9 @@ const ctx = gameCanvas.getContext("2d");
 { x: 200, y: 500, width: 20, height: 50,  color: "red", speed: 2 },
  { x: 400, y: 500,width: 20,height: 50,color: "red", speed: 2}
 ];
+  let gameOver = false;
    const MAX_ENEMIES = 40;
-   
+
  function drawEnemies() {
   enemies.forEach(enemy => {
    ctx.fillStyle = enemy.color;
@@ -57,7 +58,7 @@ const ctx = gameCanvas.getContext("2d");
 
  };
  function spawnEnemy() {
-  if (enemies.length >= MAX_ENEMIES) return;
+  if (gameOver || enemies.length >= MAX_ENEMIES) return;
   const color = ["red", "blue", "purple", "orange"];
   enemies.push({
    x: Math.random() * (gameCanvas.width - 20),
