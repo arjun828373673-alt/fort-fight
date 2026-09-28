@@ -115,6 +115,7 @@ document.addEventListener("keyup", (event) => {
   player.y = Math.max(grass.y, Math.min(player.y, gameCanvas.height - player.height));
   moveEnemies();
   checkCollisions();
+  checkGameOver();
  }
 
  function draw() {
