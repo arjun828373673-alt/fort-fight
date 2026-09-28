@@ -46,8 +46,8 @@ const ctx = gameCanvas.getContext("2d");
 
 
  let enemies = [
-{ x: 200, y: 500, width: 20, height: 50,  color: "red", speed: 2 },
- { x: 400, y: 500,width: 20,height: 50,color: "red", speed: 2}
+{ x: 200, y: 500, width: 20, height: 50,  color: "red", speed: 0.5 },
+ { x: 400, y: 500,width: 20,height: 50,color: "red", speed: 0.5}
 ];
   let gameOver = false;
    const MAX_ENEMIES = 40;
