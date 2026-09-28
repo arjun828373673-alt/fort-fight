@@ -43,6 +43,8 @@ const ctx = gameCanvas.getContext("2d");
   ctx.fillRect(castle.x + 10, castle.y + 10, 20, 20);
   ctx.fillRect(castle.x + 70, castle.y + 10, 20, 20);
  }
+
+
  let enemies = [
 { x: 200, y: 500, width: 20, height: 50,  color: "red", speed: 2 },
  { x: 400, y: 500,width: 20,height: 50,color: "red", speed: 2}
@@ -97,7 +99,20 @@ function isColliding(a, b) {
    enemies = enemies.filter(enemy => !isColliding(player, enemy));
    }
  const keys = {};
- 
+ function restartGame() {
+  enemies = [ { x: 200, y: 500, width: 20, height: 50, color: "red", speed: 2 },
+  { x: 400, y: 500, width: 20, height: 50, color: "red", speed: 2 } ];
+  player.x = 300;
+  player.y = 400;
+  gameOver = false;
+ }
+
+ document.addEventListener("keydown", (event) => { 
+keys[event.key] = true;
+  if (event.key === "r" && gameOver) {
+    restartGame();
+  } 
+});
  document.addEventListener("keydown", (event) => {
   keys[event.key] = true;
  });
