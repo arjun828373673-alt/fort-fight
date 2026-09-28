@@ -100,8 +100,8 @@ function isColliding(a, b) {
    }
  const keys = {};
  function restartGame() {
-  enemies = [ { x: 200, y: 500, width: 20, height: 50, color: "red", speed: 2 },
-  { x: 400, y: 500, width: 20, height: 50, color: "red", speed: 2 } ];
+  enemies = [ { x: 200, y: 500, width: 20, height: 50, color: "red", speed: 0.7 },
+  { x: 400, y: 500, width: 20, height: 50, color: "red", speed: 0.7 } ];
   player.x = 300;
   player.y = 400;
   gameOver = false;
@@ -121,6 +121,7 @@ document.addEventListener("keyup", (event) => {
  });
 
  function update() {
+  if (gameOver) return;
   if (keys["ArrowUp"] || keys["w"]) player.y -= player.speed;
   if (keys["ArrowDown"] || keys["s"]) player.y += player.speed;
   if (keys["ArrowLeft"] || keys["a"]) player.x -= player.speed;
@@ -145,6 +146,7 @@ document.addEventListener("keyup", (event) => {
   if (gameOver) {
     ctx.fillStyle = "black";
     ctx.font = "48px Arial";
+    ctx.textAlign = "center";
     ctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
     ctx.fillStyle = "white";
     ctx.fillText("Game Over", gameCanvas.width / 2 , gameCanvas.height / 2);
