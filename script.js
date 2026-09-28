@@ -79,8 +79,13 @@ const ctx = gameCanvas.getContext("2d");
   });
   enemies = enemies.filter(enemy => enemy.y + enemy.height > 0);
 }
- 
-  function isColliding(a, b) {
+function checkGameOver() {
+  const crossed = enemies.some(enemy => enemy.y < grass.y);
+  if (crossed) {
+    gameOver = true;
+  }
+}
+function isColliding(a, b) {
   return (
         a.x < b.x + b.width &&
          a.x + a.width > b.x &&
