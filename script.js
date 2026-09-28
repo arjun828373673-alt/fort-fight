@@ -47,17 +47,17 @@ const ctx = gameCanvas.getContext("2d");
 { x: 200, y: 500, width: 20, height: 50,  color: "red", speed: 2 },
  { x: 400, y: 500,width: 20,height: 50,color: "red", speed: 2}
 ];
-
+   const MAX_ENEMIES = 40;
+   
  function drawEnemies() {
   enemies.forEach(enemy => {
    ctx.fillStyle = enemy.color;
    ctx.fillRect(enemy.x, enemy.y, enemy.width, enemy.height);
   });
 
-  const MAX_ENEMIES = 40;
  };
  function spawnEnemy() {
-  if (enemies.length < MAX_ENEMIES) return;
+  if (enemies.length >= MAX_ENEMIES) return;
   const color = ["red", "blue", "purple", "orange"];
   enemies.push({
    x: Math.random() * (gameCanvas.width - 20),
@@ -78,7 +78,7 @@ const ctx = gameCanvas.getContext("2d");
   });
   enemies = enemies.filter(enemy => enemy.y + enemy.height > 0);
 }
- }
+ 
   function isColliding(a, b) {
   return (
         a.x < b.x + b.width &&
