@@ -126,7 +126,18 @@ document.addEventListener("keyup", (event) => {
   ctx.fillStyle = player.color;
   ctx.fillRect(player.x, player.y, player.width, player.height);
   drawEnemies();
- }  function gameLoop() {
+  
+  if (gameOver) {
+    ctx.fillStyle = "black";
+    ctx.font = "48px Arial";
+    ctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
+    ctx.fillStyle = "white";
+    ctx.fillText("Game Over", gameCanvas.width / 2 , gameCanvas.height / 2);
+    ctx.font = "24px Arial";
+    ctx.fillText("Press R to Restart", gameCanvas.width / 2 , gameCanvas.height / 2 + 50);
+  }
+ } 
+  function gameLoop() {
   update();
   draw();
   requestAnimationFrame(gameLoop);
