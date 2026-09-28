@@ -58,26 +58,26 @@ const ctx = gameCanvas.getContext("2d");
  };
  function spawnEnemy() {
   if (enemies.length < MAX_ENEMIES) return;
-  enemies.forEach(enemy => {
-   const color = ["red", "blue", "purple", "orange"];
-   enemies.push({
-    x: Math.random() * (gameCanvas.width - 20),
-    y: 500,
-    width: 20,
-    height: 50,
-    color: color[Math.floor(Math.random() * color.length)],
-    speed: 2
-   });
+  const color = ["red", "blue", "purple", "orange"];
+  enemies.push({
+   x: Math.random() * (gameCanvas.width - 20),
+   y: gameCanvas.height,
+   width: 20,
+   height: 50,
+   color: color[Math.floor(Math.random() * color.length)],
+   speed: 2
   });
  }
  setInterval(() => {
   for (let i = 0; i< 3; i++) 
-   swapEnemies();
+   spawnEnemy();
   }, 1000);
   function moveEnemies() {
   enemies.forEach(enemy => {
    enemy.y -= enemy.speed;
   });
+  enemies = enemies.filter(enemy => enemy.y + enemy.height > 0);
+}
  }
   function isColliding(a, b) {
   return (
