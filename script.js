@@ -70,7 +70,7 @@ const ctx = gameCanvas.getContext("2d");
  setInterval(() => {
   for (let i = 0; i< 10; i++) 
    swapEnemies();
-  }, 1000);
+  }, 10000000);
   function moveEnemies() {
   enemies.forEach(enemy => {
    enemy.y -= enemy.speed;
