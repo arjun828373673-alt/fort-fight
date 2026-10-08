@@ -11,7 +11,8 @@ It is a 2D fighting game in which you save your kingdom from invaders
 . if you loss the game you can retry game by pressing 'R'
 # Game visuals
 . screen short 1 <img width="1877" height="1031" alt="Screenshot 2026-10-08 184902" src="https://github.com/user-attachments/assets/758a22b8-aad9-4cf2-a4f2-a7053649b3d3" />
-. screen short 2 <img width="1407" height="247" alt="Screenshot 2026-10-08 184918" src="https://github.com/user-attachments/assets/d5163dbe-5007-44d8-a252-3e5f1ff800e3" />
+. screen short 2 <img width="1407" height="241" alt="Screenshot 2026-10-08 193002" src="https://github.com/user-attachments/assets/ce33c7bf-cfe6-4672-ae65-3828cb63e5e9" />
+
 # why I made this 
 I made this because I want to become a game developer and before this game I made 2 more games and I make this game use Javascript , HTML , CSS instead of C++ because I want to also become a web developer and currently I don't known C++ 
 ## Assets and gameplay 
