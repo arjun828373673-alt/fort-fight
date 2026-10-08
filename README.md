@@ -20,3 +20,6 @@ All things including canvas, character , grass, Guard , invaders , sky , mechani
 . HTML5 & CSS3 : for game frontend designing, game structure and for to generate Canvas
 . Javascript : for game Physics , key listener , enemy spawnping , character movement 
 . HTML canvas : for making game canvas 
+# download Repository
+```bash
+git clone [https://github.com/arjun828373673-alt/fort-fight.git]
