@@ -16,7 +16,7 @@ It is a 2D fighting game in which you save your kingdom from invaders
 # why I made this 
 I made this because I want to become a game developer and before this game I made 2 more games and I make this game use Javascript , HTML , CSS instead of C++ because I want to also become a web developer and currently I don't known C++ 
 ## Assets and gameplay 
-All things including canvas, character , grass, Guard , invaders , sky , mechanics of game and things I made from code I don't use AI 
+All things including canvas, character , grass, Guard , invaders , sky , mechanics of game, and banner in the the game landing page is a screen short of my canvas game all things are made by me  I don't use AI 
 # How I made this 
 . HTML5 & CSS3 : for game frontend designing, game structure and for to generate Canvas
 . Javascript : for game Physics , key listener , enemy spawnping , character movement 
