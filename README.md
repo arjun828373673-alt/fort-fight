@@ -12,6 +12,8 @@ It is a 2D fighting game in which you save your kingdom from invaders
 # Game visuals
 . screen short 1 <img width="1877" height="1031" alt="Screenshot 2026-10-08 184902" src="https://github.com/user-attachments/assets/758a22b8-aad9-4cf2-a4f2-a7053649b3d3" />
 . screen short 2 <img width="1407" height="241" alt="Screenshot 2026-10-08 193002" src="https://github.com/user-attachments/assets/ce33c7bf-cfe6-4672-ae65-3828cb63e5e9" />
+. screen short 3 <img width="1892" height="1028" alt="Screenshot 2026-10-09 111725" src="https://github.com/user-attachments/assets/c02253f6-2fee-41e4-84f1-6a3ba1a75323" />
+. screen short 4 <img width="1877" height="1013" alt="Screenshot 2026-10-09 111803" src="https://github.com/user-attachments/assets/eb1be10b-40b0-43f4-a4e9-fb342faabf83" />
 
 # why I made this 
 I made this because I want to become a game developer and before this game I made 2 more games and I make this game use Javascript , HTML , CSS instead of C++ because I want to also become a web developer and currently I don't known C++ 
